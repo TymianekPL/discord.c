@@ -4,9 +4,11 @@ CC = gcc
 CFLAGS = -Wall -lws2_32 -lWinhttp
 
 SRC_FILES = \
-	$(wildcard $(SRC_DIR)/*.c)
+	$(wildcard $(SRC_DIR)/*.c) \
+	$(wildcard $(SRC_DIR)/**/*.c)
 HEADER_FILES = \
-	$(wildcard $(SRC_DIR)/*.h)
+	$(wildcard $(SRC_DIR)/*.h) \
+	$(wildcard $(SRC_DIR)/**/*.h)
 OUT_FILES = \
 	$(SRC_FILES:%.c=%.o)
 
