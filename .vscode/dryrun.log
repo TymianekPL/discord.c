@@ -1,0 +1,6 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory `e:/projects/discord.c'
+gcc -shared -o discord.dll discord\src/http.o discord\src/main.o discord\src/request.o discord\src/web/sockets.o -Wall -lws2_32 -lWinhttp
+ 
+make.exe: Leaving directory `e:/projects/discord.c'
+ 

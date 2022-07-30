@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "C:/program_files/TDM-GCC-64/bin/gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-clang-x64",
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "compilerArgs": [
+                "-Wall",
+                "-lws2_32",
+                "-lWinhttp"
+            ]
+        }
+    ],
+    "version": 4
+}
