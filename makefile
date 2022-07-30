@@ -1,7 +1,7 @@
 SRC_DIR = discord\src
 
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -lws2_32 -lWinhttp
 
 SRC_FILES = \
 	$(wildcard $(SRC_DIR)/*.c)
@@ -11,10 +11,10 @@ OUT_FILES = \
 	$(SRC_FILES:%.c=%.o)
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) -o $@ $<
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 all: $(OUT_FILES) $(HEADER_FILES)
-	$(CC) -shared -o discord.dll $(OUT_FILES)
+	$(CC) -shared -o discord.dll $(OUT_FILES) $(CFLAGS)
 
 EXAMPLE_FOLDER = example
 EXAMPLE_FILES = \
